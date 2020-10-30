@@ -39,3 +39,8 @@ for file in bucket.objects.filter(Prefix= folder_name):
 # print out the keys which are modified dates
 _ = [print(x, '\n') for x in sorted(di_date_s3filename.keys()) ]
 
+# print out dates (in order) then print files
+for x in sorted(di_date_s3filename.keys()):
+    print("Modified date: ", x)
+    print(di_date_s3filename[x])
+    print()
